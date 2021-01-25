@@ -1,0 +1,48 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    background-color: cadetblue;
+}
+#main{
+    grid-area: 1 / 2 / 3 / 3;
+    min-width: 500px;
+    background-color: rgb(135, 82, 179);
+
+}
+header{
+    text-align: center;
+}
+#description{
+    font-style: italic;
+}
+#survey-form{
+    
+}
+#name-label{
+    font-weight: bold;
+}
+#email-label{
+    font-weight: bold;
+}
+#number-label{
+    font-weight: bold;
+}
+#dropdown{
+    width: 100%;
+}
+#dropdown-label{
+    font-weight: bold;
+}
+#form-group{
+    padding: 10px; 
+}
+input{
+    width: 100%;
+}
+legend{
+    font-weight: bold;
+}
+#comments{
+    width: 100%;
+}

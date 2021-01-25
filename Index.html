@@ -1,2 +1,93 @@
-<h1>This webpage is still on the making, please come back later to see the newly added content.</h1>
-<img src="Images/gatitoConCorazones.jpg" alt="Cute cat photo">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css">        
+        <title>Survey</title>
+    </head>
+
+    <body>
+        <div id="main">
+            <header>
+                <h1 id="title">Survey form title</h1>
+                <p id="description">Description</p>
+            </header>
+            <form id="survey-form" action="">
+                <div id="form-group"> <!--Name section-->
+                    <label id="name-label" for="name">
+                        Name
+                    </label>
+                    <input id="name" type="text" name="Name" placeholder="Enter your name" required>
+                </div>
+                <div id="form-group"><!--Email section-->
+                    <label id="email-label" for="email">
+                        Email
+                    </label>
+                    <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+                </div>
+                <div id="form-group"><!--Age section-->
+                    <label id="number-label" for="number">
+                        Age(Optional)
+                    </label>
+                    <input id="number" type="number" name="age" min="18" max="55" placeholder="Enter your age">
+                </div>
+                <div id="form-group"><!--dropdown section-->
+                    <label id="dropdown-label" for="dropdown">
+                        Pick one:
+                    </label>
+                    <br>
+                    <select name="" id="dropdown">
+                        <option disabled="" selected="" value="">Select</option>
+                        <option value="opt 1">opt 1</option>
+                        <option value="opt 2">opt 2</option>
+                        <option value="opt 3">opt 3</option>
+                    </select>
+                </div>
+                <div id="form-group"><!--radio button section-->
+                    <legend>Would you recomend this game?</legend>
+                    <label>
+                        <input id="radio" name="user-recommend" value="yes" type="radio" checked="">
+                        Yes
+                    </label>
+                    <label>
+                        <input id="radio" name="user-recommend" value="maybe" type="radio">
+                        Maybe
+                    </label>
+                    <label>
+                        <input id="radio" name="user-recommend" value="no" type="radio">
+                        No
+                    </label>
+                </div>
+                <div id="form-group"><!--checkbox section-->
+                    <legend>What was most interesting for you?</legend>
+
+                    <input id="combat" name="interest" value="combat" type="checkbox">
+                    <label for="combat">Combat</label>
+
+                    <input id="story" name="interest" value="story" type="checkbox">
+                    <label for="story">Story</label>
+
+                    <input id="world" name="interest" value="world" type="checkbox">
+                    <label for="world">World and scenery</label>
+
+                    <input id="multiplayer" name="interest" value="multiplayer" type="checkbox" >
+                    <label for="multiplayer">multiplayer experience</label>
+
+                </div>
+                <div id="form-group"><!--text area section-->
+                    <label for="">
+
+                    </label>
+                    <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter your opinion here . . ." ></textarea>
+                </div>
+                <div id="form-group"><!--submit button section-->
+                    <button id="submit" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
+
