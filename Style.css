@@ -1,14 +1,33 @@
+:root{
+    --color-darkblue: #1a205f;
+}
+body::before{
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: var(--color-darkblue);
+    background: url(Images/background1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr;
-    background-color: cadetblue;
+    font-family: 'Nunito Sans', sans-serif;
 }
 #main{
     grid-area: 1 / 2 / 3 / 3;
+    position: static;
     min-width: 500px;
-    background-color: rgb(135, 82, 179);
-
+    background-color: rgba(31, 41, 102, 0.7);
+    border-radius: 0.50rem;
+    color: white;
 }
 header{
     text-align: center;
@@ -35,14 +54,19 @@ header{
     font-weight: bold;
 }
 #form-group{
-    padding: 10px; 
+    padding: 0px 1rem 2rem 1rem; 
 }
 input{
     width: 100%;
+    border-radius: 0.25rem;
 }
 legend{
     font-weight: bold;
 }
 #comments{
     width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+#commentsTitle{
+    font-weight: bold;
 }

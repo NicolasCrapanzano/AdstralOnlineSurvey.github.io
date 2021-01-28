@@ -2,7 +2,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS -->
         <link rel="stylesheet" href="Style.css">        
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> 
         <title>Survey</title>
     </head>
 
@@ -15,32 +20,32 @@
             <form id="survey-form" action="">
                 <div id="form-group"> <!--Name section-->
                     <label id="name-label" for="name">
-                        Name
+                        Username
                     </label>
                     <input id="name" type="text" name="Name" placeholder="Enter your name" required>
-                </div>
+                </div>                
                 <div id="form-group"><!--Email section-->
                     <label id="email-label" for="email">
                         Email
                     </label>
                     <input id="email" type="email" name="email" placeholder="Enter your Email" required>
                 </div>
-                <div id="form-group"><!--Age section-->
+                <div id="form-group"><!--hours section-->
                     <label id="number-label" for="number">
-                        Age(Optional)
+                        Hours played(Optional)
                     </label>
-                    <input id="number" type="number" name="age" min="18" max="55" placeholder="Enter your age">
+                    <input id="number" type="number" name="hours" min="18" max="55" placeholder="How many hours you played?">
                 </div>
                 <div id="form-group"><!--dropdown section-->
                     <label id="dropdown-label" for="dropdown">
                         Pick one:
                     </label>
                     <br>
-                    <select name="" id="dropdown">
+                    <select name="" id="dropdown" required>
                         <option disabled="" selected="" value="">Select</option>
                         <option value="opt 1">opt 1</option>
                         <option value="opt 2">opt 2</option>
-                        <option value="opt 3">opt 3</option>
+                        <option value="opt 3">opt 3</option>                        
                     </select>
                 </div>
                 <div id="form-group"><!--radio button section-->
@@ -61,24 +66,30 @@
                 <div id="form-group"><!--checkbox section-->
                     <legend>What was most interesting for you?</legend>
 
-                    <input id="combat" name="interest" value="combat" type="checkbox">
+                    <input id="combat" name="interest" value="combat" type="checkbox" >
                     <label for="combat">Combat</label>
 
                     <input id="story" name="interest" value="story" type="checkbox">
                     <label for="story">Story</label>
 
-                    <input id="world" name="interest" value="world" type="checkbox">
-                    <label for="world">World and scenery</label>
+                    <input id="PVP" name="interest" value="world" type="checkbox">
+                    <label for="PVP">Player vs player experience</label>
 
-                    <input id="multiplayer" name="interest" value="multiplayer" type="checkbox" >
-                    <label for="multiplayer">multiplayer experience</label>
+                    <input id="PVE" name="interest" value="multiplayer" type="checkbox" >
+                    <label for="multiplayer">Player vs environment experience</label>
 
                 </div>
                 <div id="form-group"><!--text area section-->
-                    <label for="">
-
+                    <label id="commentsTitle" for="comments">
+                        Let us know your experience with the game
                     </label>
                     <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Enter your opinion here . . ." ></textarea>
+                </div>
+                <div id="form-group"><!--text area section-->
+                    <label id="commentsTitle" for="bugs">
+                        Did you had any bugs or technical problems with the game?
+                    </label>
+                    <textarea id="comments" name="bugs" rows="5" cols="50" placeholder="Send us your problems here . . ." ></textarea>
                 </div>
                 <div id="form-group"><!--submit button section-->
                     <button id="submit" type="submit">
