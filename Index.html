@@ -8,44 +8,45 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> 
+        <!--Background image from :-->
+        <!--https://www.pexels.com/es-es/foto/foto-de-persona-escribiendo-en-el-teclado-de-la-computadora-735911-->
         <title>Survey</title>
     </head>
 
     <body>
         <div id="main">
             <header>
-                <h1 id="title">Survey form title</h1>
-                <p id="description">Description</p>
+                <h1 id="title">Adstral online survey form</h1>
+                <p id="description">Thank you for giving feedback on our Beta test </p>
             </header>
             <form id="survey-form" action="">
                 <div id="form-group"> <!--Name section-->
                     <label id="name-label" for="name">
                         Username
                     </label>
-                    <input id="name" type="text" name="Name" placeholder="Enter your name" required>
+                    <input id="name" class="inputfield" type="text" name="Name" placeholder="Enter your name" required>
                 </div>                
                 <div id="form-group"><!--Email section-->
                     <label id="email-label" for="email">
                         Email
                     </label>
-                    <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+                    <input id="email" class="inputfield" type="email" name="email" placeholder="Enter your Email" required>
                 </div>
                 <div id="form-group"><!--hours section-->
                     <label id="number-label" for="number">
-                        Hours played(Optional)
+                        Hours played <span id="optional"> (Optional)</span>
                     </label>
-                    <input id="number" type="number" name="hours" min="18" max="55" placeholder="How many hours you played?">
+                    <input id="number" class="inputfield" type="number" name="hours" min="18" max="55" placeholder="How many hours you played?">
                 </div>
                 <div id="form-group"><!--dropdown section-->
                     <label id="dropdown-label" for="dropdown">
-                        Pick one:
+                        wich language did you play on?:
                     </label>
-                    <br>
-                    <select name="" id="dropdown" required>
+                    <select name="language" id="dropdown" required>
                         <option disabled="" selected="" value="">Select</option>
-                        <option value="opt 1">opt 1</option>
-                        <option value="opt 2">opt 2</option>
-                        <option value="opt 3">opt 3</option>                        
+                        <option value="Spanish">Spanish</option>
+                        <option value="English">English</option>
+                        <option value="Chinese">Chinese</option>                        
                     </select>
                 </div>
                 <div id="form-group"><!--radio button section-->
@@ -63,20 +64,27 @@
                         No
                     </label>
                 </div>
-                <div id="form-group"><!--checkbox section-->
-                    <legend>What was most interesting for you?</legend>
+                <div id="form-group" ><!--checkbox section-->
+                    <legend>What part of the game made you play?</legend>
 
-                    <input id="combat" name="interest" value="combat" type="checkbox" >
-                    <label for="combat">Combat</label>
+                    <label for="interest" class="test">
+                        <input id="combat" name="interest" value="combat" type="checkbox" >                        
+                        Combat
+                    </label>
 
-                    <input id="story" name="interest" value="story" type="checkbox">
-                    <label for="story">Story</label>
+                    <label for="story">
+                        <input id="story" name="interest" value="story" type="checkbox">
+                        Story
+                    </label>
 
-                    <input id="PVP" name="interest" value="world" type="checkbox">
-                    <label for="PVP">Player vs player experience</label>
-
-                    <input id="PVE" name="interest" value="multiplayer" type="checkbox" >
-                    <label for="multiplayer">Player vs environment experience</label>
+                    <label for="PVP">
+                        <input id="PVP" name="interest" value="world" type="checkbox">
+                        Player vs player experience                        
+                    </label>
+                    <label for="multiplayer">
+                        <input id="PVE" name="interest" value="multiplayer" type="checkbox" >
+                        Player vs environment experience
+                    </label>
 
                 </div>
                 <div id="form-group"><!--text area section-->
@@ -89,7 +97,7 @@
                     <label id="commentsTitle" for="bugs">
                         Did you had any bugs or technical problems with the game?
                     </label>
-                    <textarea id="comments" name="bugs" rows="5" cols="50" placeholder="Send us your problems here . . ." ></textarea>
+                    <textarea id="comments" name="bugs" rows="5" cols="50" placeholder="Send your report here . . ." ></textarea>
                 </div>
                 <div id="form-group"><!--submit button section-->
                     <button id="submit" type="submit">
