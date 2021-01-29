@@ -28,7 +28,7 @@ body{
     position: static;
     color: white;
     margin: auto;
-    width: 70%;
+    width: 80%;
 }
 header{
     text-align: center;
@@ -99,10 +99,25 @@ label{
 #submit:active{
     background-color: #2aa02e;
 }
+@media(max-width: 800px)
+{
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    #main{
+        grid-area: 1 / -2 / 1 / -2;
+        width: 80%;
+    }
+}
 @media(max-width: 720px)
 {
     body{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #main{
+        grid-area: 1 / -2 / 1 / -2;
+        width: 100%;
     }
 }
